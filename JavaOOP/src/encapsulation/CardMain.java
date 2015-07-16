@@ -16,30 +16,22 @@ public class CardMain {
 		 홍길동 승리
 		 
 		 * */
-		String name1 = "", name2 = "";
-		int a=0, b=0;
-		
+
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("이름 입력 :");
-		name1 = scanner.next();
-
-		System.out.println("이름 입력");
-		name2 = scanner.next();
-
+		System.out.println("이름 입력 : ");
+		CardBean hong = new CardBean(scanner.next());
+		System.out.println("이름 입력 : ");
+		CardBean kim = new CardBean(scanner.next());
 		
-		//객체를 생성
-		CardBean cardBean = new CardBean();
-		//스캐너가 받아놓은 값은 현재 지변에 있다.
-		//그런데 연산로직은 객체에 있다.
-		//따라서, 지변에 있는 값을 멤변에 던져야한다.
-		cardBean.setName1(name1);
-		cardBean.setName2(name2);
-		cardBean.setA();
-		//스캐너로 받지 않는다고 setA()를 호출(사용)하지 않으면
-		//랜덤숫자가 발생하지않는다.
-		cardBean.setB();
-		System.out.println(cardBean.toString());
+		//인터넷 망을 타고 데이터값이 게임회사 들어옴
+
+
+		CardGame cardGame = new CardGame(hong,kim);
+		
+		//사용자가 결과화면을 보는 중....
+		System.out.println(cardGame.toString());
+
 		
 
 	}
