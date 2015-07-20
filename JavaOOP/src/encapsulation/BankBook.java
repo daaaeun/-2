@@ -40,7 +40,7 @@ public class BankBook implements Account{
 	//위치 : 필드--> {인변,상수,클래스변수} < 멤변  
 	
 /*===== 멤버필드 =====*/	
-	private static String BANK;
+	public static String BANK;
 	private int bankbookNo;
 	private String name;
 	private int money;
