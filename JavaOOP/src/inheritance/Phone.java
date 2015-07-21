@@ -1,4 +1,4 @@
-package inhebitance;
+package inheritance;
 
 public class Phone {//눈으로 식별가능한 구상클래스
 	/* ===== 필드 ===== */

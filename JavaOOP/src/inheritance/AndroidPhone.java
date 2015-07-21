@@ -1,4 +1,4 @@
-package inhebitance;
+package inheritance;
 
 /*
  객체지향언어 (2) 상속의 문법
@@ -34,7 +34,7 @@ public class AndroidPhone extends Iphone{
 		//super.setData(name, data);
 		this.data = super.getCompany() + "\t" +
 					super.getCall() + "\t" +
-					super.getOs() + "\t" +
+					this.getOs() + "\t" +
 					data + "카톡메세지 전달";
 	}
 	@Override
