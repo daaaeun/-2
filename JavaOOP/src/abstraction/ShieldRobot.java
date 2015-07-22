@@ -3,14 +3,9 @@ package abstraction;
 public class ShieldRobot extends BasicBot {
 
 	private int shieldPoint;
-	
-	public void charge(int energy, int shielPoint) {
-		super.charge(energy);
-		this.shieldPoint = shielPoint;
-	}
-	@Override
-	public void run(int speed) {
-		super.run(speed);
+
+	public void setShieldPoint(int shieldPoint) {
+		this.shieldPoint = shieldPoint;
 	}
 	
 	@Override

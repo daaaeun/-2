@@ -4,14 +4,10 @@ public class GunRobot extends BasicBot{
 	
 	private int attackPoint;
 	
-	public void charge(int energy, int attackPoint) {
-		super.charge(energy);
+	public void setAttackPoint(int attackPoint) {
 		this.attackPoint = attackPoint;
 	}
-	@Override
-	public void run(int speed) {
-		super.run(speed);
-	}
+
 
 	@Override
 	public void status() {

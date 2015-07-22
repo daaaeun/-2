@@ -1,6 +1,6 @@
 package abstraction;
 
-import java.awt.Robot;
+
 
 public class RobotMain {
 	public static void main(String[] args) {
@@ -17,12 +17,28 @@ public class RobotMain {
 		 * */
 		
 		GunRobot gunRobot = new GunRobot();
-		gunRobot.charge(10, 50);
+		
 		gunRobot.run(10);
+		gunRobot.charge(10);
+		gunRobot.setAttackPoint(50);
+//		gunRobot.status();
 		
 		ShieldRobot shieldRobot = new ShieldRobot();
-		shieldRobot.charge(20, 50);
+		
+		shieldRobot.charge(20);
 		shieldRobot.run(20);
+		shieldRobot.setShieldPoint(50);
+//		shieldRobot.status();
+		
+		Robot[] robots = new Robot[2];
+		robots[0] = gunRobot;
+		robots[1] = shieldRobot;
+		
+		//확장된 for문
+		
+		for (Robot robot : robots) {
+			robot.status();
+		}
 		
 
 		
