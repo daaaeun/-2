@@ -5,15 +5,15 @@ public interface BankRole {
 	 계좌 개설 기능
 	 * */
 
-	public void openAccount(String accountNo, //계좌번호 
+	public void openAccount(
 							String ownerName, //계좌주 이름
-							String passward,  //비번
-							String restMoney); //잔액
+							int password,  //비번
+							int restMoney); //잔액
 	/*
 	 계좌번호를 입력하면 계좌 내용이 출력
 	 * */
 	
-	public abstract Account searchAccountByAccountNo(
+	public abstract BankBook searchAccountByAccountNo(
 			String accountNo);
 	
 	/*
@@ -21,7 +21,7 @@ public interface BankRole {
 	 (단, 동일인이 다수의 계좌를 가질 수 있다.)
 	 * */
 	
-	public Account[] searchAccountByName(
+	public BankBook[] searchAccountByName(
 			String ownerName);
 	
 	/*
@@ -37,4 +37,8 @@ public interface BankRole {
 	
 	public boolean closeAccount(
 			String accountNo);
+	
+	/*
+	 만들어진 통장을 고객에게 주는 기능 = 생성결과를 보여준다.
+	 * */
 }

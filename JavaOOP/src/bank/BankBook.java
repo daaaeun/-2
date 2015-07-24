@@ -1,7 +1,6 @@
 package bank;
 
-public class Bankbook implements Account {
-
+public class BankBook {
 	/*===== 멤버필드 =====*/	
 	public static String BANK;
 	private int bankbookNo;
@@ -21,8 +20,8 @@ public class Bankbook implements Account {
 	//getter setter 단축키 : ART + SHIFT +S
 	
 	
-	@Override
-	public String toString() {
+	
+	public String showAccount() {
 		return "==============\n"
 				+"["+ BANK +"]\n"
 				+"계좌번호 : " + bankbookNo
@@ -31,21 +30,7 @@ public class Bankbook implements Account {
 				+"\n==============";
 	}
 
-	public int getBankbookNo() {
-		return bankbookNo;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public int getMoney() {
-		return money;
-	}
-
-	public void setMoney(int money) {
-		this.money = money;
-	}
+	
 	public void setPass(int pass) {
 		this.pass = pass;
 	}
@@ -53,7 +38,7 @@ public class Bankbook implements Account {
 		return pass;
 	}
 
-	@Override
+	
 	public void withdraw(int money) {
 		//파라미터 값이 정상 값이 아닌 상태를 추적해서 필터링하는 로직이 필요해짐
 		//==> 유효성 체크
@@ -67,7 +52,39 @@ public class Bankbook implements Account {
 		
 	}
 
-	@Override
+	
+	public int getBankbookNo() {
+		return bankbookNo;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setBankbookNo(int bankbookNo) {
+		this.bankbookNo = bankbookNo;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
 	public void deposit(int money) {
 		if (money <= 0) {
 			msg = "출금액은 0보다 커야합니다.";
